@@ -269,9 +269,15 @@ def list_papers(collection: Optional[str] = None,
                 continue
             
             papers.append(paper)
+            seen_keys: set[str] = set()
+        unique_papers:list[Paper] = []
+        for p in papers:
+            if p.key in seen_keys:
+                continue
+            seen_keys.add(p.key)
+            unique_papers.append(p)
         
-        return papers
-
+        return unique_papers
 
 def list_collections() -> list[Collection]:
     """列出所有 collection，带每个 collection 的论文数量"""

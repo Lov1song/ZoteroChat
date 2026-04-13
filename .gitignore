@@ -6,3 +6,5 @@ data/checkpoints/
 *.db
 .vscode/
 scratch/
+CLAUDE.md
+.claude
