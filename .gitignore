@@ -5,3 +5,4 @@ data/cache/
 data/checkpoints/
 *.db
 .vscode/
+scratch/
